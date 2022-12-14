@@ -3,7 +3,7 @@
 section
 {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     background: radial-gradient(#333333,#000);
     overflow: hidden;
@@ -16,7 +16,7 @@ section
 section h2
 {
     color:#fff;
-    font-size: 8 em;
+    font-size: 2em;
     text-transform: uppercase;
 }
 
@@ -100,7 +100,7 @@ section .set div:nth-child(10)
 {
     0%
     {
-        opacity: 0;
+        opacity: 1;
         top: -10%;
         transform: translateX(20 px) rotate(0deg);
     }
@@ -150,8 +150,4 @@ section .set div:nth-child(10)
     transform: scale(5) rotateY(90deg);
     /*filter: blur(4px);*/
 }
-.set5
-{
-    transform: scale(0.2) rotateX(90deg);
-    /*filter: blur(4px);*/
-}
+

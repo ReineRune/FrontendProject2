@@ -2,9 +2,11 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 body {
+    background: radial-gradient(#999393,#000);
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 4fr 1fr;
@@ -23,15 +25,46 @@ header {
     padding: 30px;
 }
 
+
+
+
 #aside1 {
     grid-area: aside1;
-    border: 1px solid black;
+    border: 6px solid black;
+
 }
+.aside .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+aside .set div {
+    position: absolute;
+    display: block;
+}
+
+aside .set div:nth-child(1) {
+    left: 10%;
+    animation: animate 5s linear infinite;
+    animation-delay: 1s;
+
+}
+
+
+
+
 
 #aside2 {
     grid-area: aside2;
     border: 1px solid black;
+
 }
+
+
 
 main {
     grid-area: main;
@@ -105,7 +138,7 @@ img {
 }
 
 #compWon {
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-direction: column;
 }
