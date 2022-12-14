@@ -22,7 +22,7 @@
     </aside>
     <main>
         <div class="score">
-            <p>Player</p>
+            <p id="playerName">Player</p>
             <p id="playerScore">0</p>
             <p>:</p>
             <p id="computerScore">0</p>
@@ -31,10 +31,12 @@
         <div class="game-window">
             <div id="enterName" style="visibility: visible;">
                 <div id="changeName">Enter name</div>
-                <div id="nameBox">
-                    <button id="okButton">ok</button>
-                    <input type="text" id="playerName" placeholder="Player">
-                </div>
+                <form id="projekt">
+                    <label for="Playername">
+                        <input type="text" id="playername" placeholder="Player name" name="Playername">
+                    </label>
+                    <button type="submit">OK</button>
+                </form>
             </div>
 
             <div id="playerChoice" style="visibility: hidden;">
@@ -65,8 +67,8 @@
             <div id="compWon" style="visibility: hidden;">
                 <h1>COMPUTER WON!</h1>
                 <div id="playAgain">
-                <button id="tryAgain">Try again?</button>
-                <button id="noThanks"> No thanks</button>
+                <button id="tryAgainComp">Try again?</button>
+                <button id="noThanksComp"> No thanks</button>
             </div>
             </div>
         </div>
@@ -79,3 +81,4 @@
 </body>
 
 </html>
+

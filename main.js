@@ -10,38 +10,47 @@ let choise = document.getElementById('playerChoice')
 let youWon = document.getElementById('youWon')
 let compWon = document.getElementById('compWon')
 let tryAgain = document.getElementById('tryAgain')
+let tryAgainComp = document.getElementById('tryAgainComp')
 let noThanks = document.getElementById('noThanks')
+let noThanksComp = document.getElementById('noThanksComp')
 let displayResult = document.getElementById('displayResult')
 
 function lose(message) {
     choise.style.visibility = 'hidden'
     displayResult.style.visibility = 'visible'
+    
+    displayResult.innerHTML = message
 
-    displayResult.innerText = message
-
-    if (computerScore < 1){
-    setTimeout(() => {
-        console.log("Delayed for 1 second.");
-        displayResult.style.visibility = 'hidden'
-        choise.style.visibility = 'visible'
-      }, "3000")}
+    if (computerScore < 1) {
+        setTimeout(() => {
+            console.log("Delayed for 1 second.");
+            displayResult.style.visibility = 'hidden'
+            choise.style.visibility = 'visible'
+        }, "3000")
+    }
 
     console.log("lose")
     computerScore++;
     computerScoreUpdate.innerHTML = computerScore
-    if(computerScore === 2){
-        
+    if (computerScore === 2) {
+
         setTimeout(() => {
             console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             compWon.style.visibility = 'visible'
-          }, "3000")
-        // choise.style.visibility = 'hidden'
-        // compWon.style.visibility = 'visible'
-        playerScore = 0;
-        computerScore = 0;
-        playerScoreUpdate.innerHTML = playerScore;
-        computerScoreUpdate.innerHTML = computerScore
+            playerScore = 0;
+            computerScore = 0;
+            playerScoreUpdate.innerHTML = playerScore;
+            computerScoreUpdate.innerHTML = computerScore
+            
+        }, "3000")
+        tryAgainComp.addEventListener('click', function () {
+            compWon.style.visibility = 'hidden'
+            choise.style.visibility = 'visible'
+        })
+        noThanksComp.addEventListener('click', function () {
+            window.location.reload();
+        })
     }
 }
 function win(message) {
@@ -50,30 +59,36 @@ function win(message) {
 
     displayResult.innerText = message
 
-    if (playerScore < 1){
+    if (playerScore < 1) {
         setTimeout(() => {
             console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             choise.style.visibility = 'visible'
-          }, "3000")}
+        }, "3000")
+    }
 
     console.log("Win")
     playerScore++;
     playerScoreUpdate.innerHTML = playerScore;
-    if(playerScore  === 2){
+    if (playerScore === 2) {
 
         setTimeout(() => {
             console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             youWon.style.visibility = 'visible'
-          }, "3000")
-
-        // choise.style.visibility = 'hidden'
-        // youWon.style.visibility = 'visible'
-        playerScore = 0;
-        computerScore = 0;
-        playerScoreUpdate.innerHTML = playerScore;
-        computerScoreUpdate.innerHTML = computerScore
+            playerScore = 0;
+            computerScore = 0;
+            playerScoreUpdate.innerHTML = playerScore;
+            computerScoreUpdate.innerHTML = computerScore
+            
+        }, "3000")
+        tryAgain.addEventListener('click', function() {
+            youWon.style.visibility = 'hidden'
+            choise.style.visibility = 'visible'
+        })
+        noThanks.addEventListener('click', function () {
+            window.location.reload();
+        })
     }
 }
 function draw(message) {
@@ -82,12 +97,12 @@ function draw(message) {
 
     displayResult.innerText = message
 
-    
-        setTimeout(() => {
-            console.log("Delayed for 1 second.");
-            displayResult.style.visibility = 'hidden'
-            choise.style.visibility = 'visible'
-          }, "3000")
+
+    setTimeout(() => {
+        console.log("Delayed for 1 second.");
+        displayResult.style.visibility = 'hidden'
+        choise.style.visibility = 'visible'
+    }, "3000")
 
     console.log("Draw")
 }
@@ -98,18 +113,30 @@ function computerChoice() {
 }
 
 function start() {
-    let nextStep = document.getElementById('okButton')
-    nextStep.addEventListener('click', stageOne)
+    let playerName = document.getElementById('playerName')
+    document.querySelector('#projekt').addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (event.target.elements.Playername.value == '') {
+            playerName.innerHTML = Player
+        }
+        else {
+            playerName.innerHTML = event.target.elements.Playername.value
+        }
+
+        stageOne()
+    })
 }
 
 
 function stageOne() {
-    
+
     let playerPickRock = document.getElementById('playerPickRock')
     let playerPickPaper = document.getElementById('playerPickPaper')
     let playerPickScissor = document.getElementById('playerPickScissor')
     firstStep.style.visibility = 'hidden'
     choise.style.visibility = 'visible'
+    youWon.style.visibility = 'hidden'
+    compWon.style.visibility = 'hidden'
 
 
     playerPickRock.addEventListener('click', function () {
@@ -154,13 +181,13 @@ function secondStep(choice, compPick) {
             }
             break;
         case 3:
-            if(compPick === 1){
+            if (compPick === 1) {
                 lose('Computer picked rock. You lose')
             }
-            if(compPick === 2){
+            if (compPick === 2) {
                 win('Computer picked paper. You win')
             }
-            if(compPick === 3){
+            if (compPick === 3) {
                 draw("Computer also picked scissor. It's a draw")
             }
             break;
@@ -169,7 +196,5 @@ function secondStep(choice, compPick) {
 
 
 start()
-
-
 
 
