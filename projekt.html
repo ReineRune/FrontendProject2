@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projekt.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sten, sax, påse</h1>
+    </header>
+    <aside id="aside1">
+        aside1
+    </aside>
+    <aside id="aside2">
+        aside2
+    </aside>
+    <main>
+        <div class="score">
+            <p>Player</p>
+            <p id="playerScore">0</p>
+            <p>:</p>
+            <p id="computerScore">0</p>
+            <p>Computer</p>
+        </div>
+        <div class="game-window">
+            <div id="enterName" style="visibility: visible;">
+                <div id="changeName">Enter name</div>
+                <div id="nameBox">
+                    <button id="okButton">ok</button>
+                    <input type="text" id="playerName" placeholder="Player">
+                </div>
+            </div>
+
+            <div id="playerChoice" style="visibility: hidden;">
+                <button id="playerPickRock">
+                    <img src="sten.png" alt="Bild på sten">
+                </button>
+                <button id="playerPickPaper">
+                    <img src="påse.png" alt="Bild på påse">
+                </button>
+                <button id="playerPickScissor">
+                    <img src="sax.png" alt="Bild på sax">
+                </button>
+            </div>
+
+            <div id="displayResult" style="visibility: hidden;">
+                <div id="spelare"></div>
+                <div id="dator"></div>
+            </div>
+
+            <div id="youWon" style="visibility: hidden;">
+                <h1>YOU WON!</h1>
+                <div id="playAgain">
+                    <button id="tryAgain">Try again?</button>
+                    <button id="noThanks"> No thanks</button>
+                </div>
+            </div>
+
+            <div id="compWon" style="visibility: hidden;">
+                <h1>COMPUTER WON!</h1>
+                <div id="playAgain">
+                <button id="tryAgain">Try again?</button>
+                <button id="noThanks"> No thanks</button>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        footer
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
