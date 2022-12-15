@@ -114,7 +114,7 @@ function computerChoice() {
 
 function start() {
     let playerName = document.getElementById('playerName')
-    document.querySelector('#projekt').addEventListener('submit', function (event) {
+    document.querySelector('#nameHolder').addEventListener('submit', function (event) {
         event.preventDefault();
         if (event.target.elements.Playername.value == '') {
             playerName.innerHTML = Player

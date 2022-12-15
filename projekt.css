@@ -98,9 +98,29 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
+.game-window img:hover {
+    transform: scale(1.2)
+}
+
+.game-window h1 {
+    font-size: 3.5rem;
+}
+
+#compWon button {
+    width: 100px;
+    height: 70px;
+    border-radius: 15%;
+    font-size: large;
+}
+
+#youWon button {
+    width: 100px;
+    height: 70px;
+    border-radius: 15%;
+    font-size: large;
+}
 
 #playerName {
     margin-right: 6px;
@@ -109,8 +129,26 @@ footer {
 
 #changeName {
     padding-bottom: 40px;
-    font-size: x-large;
+    font-size: 3rem;
 }
+
+#okButton {
+    width: 60px;
+    height: 40px;
+    padding-bottom: 3px;
+    border-radius: 15%;
+    font-size: large;
+}
+
+label {
+    display: inline-block;
+    height: 40px;
+}
+
+#playername {
+    height: 33px;
+}
+
 
 #enterName {
     position: absolute;
@@ -120,9 +158,6 @@ footer {
     align-items: center;
 }
 
-#nameBox {
-    width: 250px;
-}
 
 #compWon {
     position: absolute;
@@ -145,10 +180,15 @@ footer {
 
 #playerChoice{
     position: absolute;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
 }
 
 img {
     width: 150px;
+    cursor: pointer;
 }
 
 #displayResult {
