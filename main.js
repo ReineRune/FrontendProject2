@@ -15,11 +15,6 @@ let noThanks = document.getElementById('noThanks')
 let noThanksComp = document.getElementById('noThanksComp')
 let displayResult = document.getElementById('displayResult')
 
-
-
-
-
-
 function lose(message) {
     choice.style.visibility = 'hidden'
     displayResult.style.visibility = 'visible'
@@ -28,19 +23,16 @@ function lose(message) {
 
     if (computerScore < 1) {
         setTimeout(() => {
-            console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
         }, "1000")
     }
 
-    console.log("lose")
     computerScore++;
     computerScoreUpdate.innerHTML = computerScore
     if (computerScore === 2) {
 
         setTimeout(() => {
-            console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             compWon.style.visibility = 'visible'
             playerScore = 0;
@@ -66,19 +58,16 @@ function win(message) {
 
     if (playerScore < 1) {
         setTimeout(() => {
-            console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
         }, "1000")
     }
 
-    console.log("Win")
     playerScore++;
     playerScoreUpdate.innerHTML = playerScore;
     if (playerScore === 2) {
 
         setTimeout(() => {
-            console.log("Delayed for 1 second.");
             displayResult.style.visibility = 'hidden'
             youWon.style.visibility = 'visible'
             playerScore = 0;
@@ -102,14 +91,11 @@ function draw(message) {
 
     displayResult.innerText = message
 
-
     setTimeout(() => {
-        console.log("Delayed for 1 second.");
         displayResult.style.visibility = 'hidden'
         choice.style.visibility = 'visible'
     }, "1000")
 
-    console.log("Draw")
 }
 
 function computerChoice() {
