@@ -56,7 +56,7 @@ header {
 }
 
 .box1 li:nth-child(2) {
-    left: 30%;
+    left: 10%;
     animation-delay: 5s;
 
 }
@@ -192,6 +192,12 @@ main {
 
 .game-window h1 {
     font-size: 3.5rem;
+    color: black;
+}
+
+.game-window{
+    color: white;
+    font-size: 4vh;
 }
 
 #compWon button,

@@ -25,7 +25,7 @@ function lose(message) {
         setTimeout(() => {
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
-        }, "1000")
+        }, "2000")
     }
     computerScore++;
     computerScoreUpdate.innerHTML = computerScore
@@ -39,7 +39,7 @@ function lose(message) {
             playerScoreUpdate.innerHTML = playerScore;
             computerScoreUpdate.innerHTML = computerScore
 
-        }, "1000")
+        }, "2000")
         tryAgainComp.addEventListener('click', function () {
             compWon.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
@@ -59,7 +59,7 @@ function win(message) {
         setTimeout(() => {
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
-        }, "1000")
+        }, "2000")
     }
 
     playerScore++;
@@ -74,7 +74,7 @@ function win(message) {
             playerScoreUpdate.innerHTML = playerScore;
             computerScoreUpdate.innerHTML = computerScore
 
-        }, "1000")
+        }, "2000")
         tryAgain.addEventListener('click', function () {
             youWon.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
@@ -92,7 +92,7 @@ function draw(message) {
     setTimeout(() => {
         displayResult.style.visibility = 'hidden'
         choice.style.visibility = 'visible'
-    }, "1000")
+    }, "2000")
 }
 
 function computerChoice() {
