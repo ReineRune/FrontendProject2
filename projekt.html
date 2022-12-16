@@ -13,28 +13,42 @@
 </head>
 
 <body>
+    <div class="box1">
+        <li class="rock">✊</li>
+        <li class="paper">✋</li>
+        <li class="scissor">✌️</li>
+        <li class="rock">✊</li>
+        <li class="paper">✋</li>
+        <li class="scissor">✌️</li>
+    </div>
+    <div class="box2">
+        <li class="rock">✊</li>
+        <li class="paper">✋</li>
+        <li class="scissor">✌️</li>
+        <li class="rock">✊</li>
+        <li class="paper">✋</li>
+        <li class="scissor">✌️</li>
+    </div>
 
     <header>
+
         <h1>Sten, sax, påse</h1>
 
     </header>
 
-    <aside class="ASIDE" id="aside1">
-        <div class="set">
-            <div><img src="påse.png"></div>
-            <div><img src="sax.png"></div>
-            <div><img src="sten.png"></div>
-        </div>
-
-    </aside>
+    <aside id="aside1"></aside>
 
 
 
-    <aside class="ASIDE" id="aside2">
-        aside2
+    <aside id="aside2"></aside>
 
-    </aside>
 
+        <h1>Rock, paper, scissor</h1>
+    </header>
+
+    <aside id="aside1"></aside>
+    <aside id="aside2"></aside>
+    
 
     <main>
         <div class="score">
@@ -56,15 +70,16 @@
             </div>
 
             <div id="playerChoice" style="visibility: hidden;">
-                <button id="playerPickRock">
-                    <img src="sten.png" alt="Bild på sten">
-                </button>
-                <button id="playerPickPaper">
-                    <img src="påse.png" alt="Bild på påse">
-                </button>
-                <button id="playerPickScissor">
-                    <img src="sax.png" alt="Bild på sax">
-                </button>
+                <button id="playerPickRock" class="selection">✊</button>
+
+                    <!--<img src="sten.png" alt="Bild på sten">
+                </button>-->
+                <button id="playerPickPaper"class="selection">✋</button>
+                   <!-- <img src="påse.png" alt="Bild på påse">
+                </button>-->
+                <button id="playerPickScissor" class="selection">✌️</button>
+                    <!-- <img src="sax.png" alt="Bild på sax">
+                </button> -->
             </div>
 
             <div id="displayResult" style="visibility: hidden;">
@@ -90,6 +105,7 @@
         </div>
     </main>
     <footer>
+
         <div id="rules">
             Rules: The game is a best of 3 set up where you play against the computer. You and the computer will pick
             you choice at the same time and the winner will declared after you choice is made.
@@ -97,6 +113,9 @@
             <a href="https://www.youtube.com/watch?v=F4uQssMXO38"
                         target="_blank">Click here for tutorial</a>
         </div>
+
+        footer
+
     </footer>
 
     <script src="main.js"></script>
