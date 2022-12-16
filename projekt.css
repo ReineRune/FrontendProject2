@@ -176,7 +176,18 @@ label {
     position: absolute;
     display: flex;
     flex-direction: column;
+}
 
+@keyframes bounce {
+    50% {transform: translateY(-50px);} 
+    /* bounce 1s ease 1.5s; */
+}
+
+#youWonText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1s;
 }
 
 #playAgain {

@@ -16,7 +16,7 @@
 
     <header>
         <h1>Sten, sax, påse</h1>
-       
+
     </header>
 
     <aside class="ASIDE" id="aside1">
@@ -35,7 +35,7 @@
 
     </aside>
 
-    
+
     <main>
         <div class="score">
             <p id="playerName">Player</p>
@@ -73,7 +73,7 @@
             </div>
 
             <div id="youWon" style="visibility: hidden;">
-                <h1>YOU WON!</h1>
+                <h1 id="youWonText">YOU WON!</h1>
                 <div id="playAgain">
                     <button id="tryAgain">Try again?</button>
                     <button id="noThanks"> No thanks</button>
@@ -83,18 +83,23 @@
             <div id="compWon" style="visibility: hidden;">
                 <h1>COMPUTER WON!</h1>
                 <div id="playAgain">
-                <button id="tryAgainComp">Try again?</button>
-                <button id="noThanksComp"> No thanks</button>
-            </div>
+                    <button id="tryAgainComp">Try again?</button>
+                    <button id="noThanksComp"> No thanks</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        footer
+        <div id="rules">
+            Rules: The game is a best of 3 set up where you play against the computer. You and the computer will pick
+            you choice at the same time and the winner will declared after you choice is made.
+            Rock beats scissors, scissors beats paper and paper beats rock. Good luck!
+            <a href="https://www.youtube.com/watch?v=F4uQssMXO38"
+                        target="_blank">Click here for tutorial</a>
+        </div>
     </footer>
 
     <script src="main.js"></script>
 </body>
 
 </html>
-
