@@ -22,17 +22,16 @@ function lose(message) {
     displayResult.innerHTML = message
 
     if (computerScore < 1) {
-        setTimeout(() => {        
+        setTimeout(() => {
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
         }, "1000")
     }
-   
     computerScore++;
     computerScoreUpdate.innerHTML = computerScore
     if (computerScore === 2) {
 
-        setTimeout(() => {          
+        setTimeout(() => {
             displayResult.style.visibility = 'hidden'
             compWon.style.visibility = 'visible'
             playerScore = 0;
@@ -57,7 +56,7 @@ function win(message) {
     displayResult.innerText = message
 
     if (playerScore < 1) {
-        setTimeout(() => {          
+        setTimeout(() => {
             displayResult.style.visibility = 'hidden'
             choice.style.visibility = 'visible'
         }, "1000")
